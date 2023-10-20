@@ -1,0 +1,112 @@
+[lang='en'] {
+    display: none;
+}
+
+[lang='fr'] {
+    display: block;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    margin: 100px 100px 100px;
+}
+
+h1 {
+    padding: 0 0 50px 0;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.barre-verticale {
+    border-left: 5px solid rgb(94, 94, 94);
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.citation {
+    font-style: italic;
+    color: rgb(61, 61, 61);
+}
+
+.citation-auth {
+    color: rgb(61, 61, 61);
+    margin-bottom: 40px;
+}
+
+main {
+    margin: 100px 100px 100px;
+    display: flex;
+}
+
+.main-left {
+    margin-right: 40px;
+}
+
+.main-right {
+    margin-left: 40px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+nav a {
+    padding: 5px 10px; 
+    color: rgb(83, 83, 83); 
+    text-decoration: none; 
+    border: 2px solid rgb(83, 83, 83); 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gray; 
+    border-color: gray;
+}
+
+.div-lien div {
+    text-align: left;
+    text-decoration: none;
+    margin: 5px 0 5px;
+    padding: 20px 40px; 
+    color: rgb(83, 83, 83); 
+    text-decoration: none; 
+    border: 2px solid rgb(83, 83, 83); 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold;
+}
+
+.div-lien img {
+    width: 50px;
+}
+
+.pp {
+    width: 500px;
+    border-radius: 50%;
+}
