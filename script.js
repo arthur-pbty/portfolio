@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
     var userLanguage = navigator.language || navigator.userLanguage;
-    
-    // Supposons que vous preniez en charge l'anglais (en) et le français (fr)
-    if (userLanguage.startsWith("fr")) {
-        document.body.classList.add("lang-fr");
-    } else {
-        document.body.classList.add("lang-en");
+    var userLanguage = userLanguage.substring(0, 2);
+
+    if (userLanguage !== "fr" && userLanguage !== "en" && userLanguage !== "zh") {
+        var userLanguage = "en";
+    } 
+
+    var elementsToStyle = document.querySelectorAll("[lang]");
+    for (var j = 0; j < elementsToStyle.length; j++) {
+        var element = elementsToStyle[j];
+        if (userLanguage !== element.getAttribute("lang")) {
+            element.style.display = "none";
+        }
     }
 });
