@@ -120,11 +120,38 @@
         <h2 lang="fr">Projets</h2>
         <h2 lang="en">Projects</h2>
         <h2 lang="zh">项目</h2>
+
+        <div class="all_projects">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
     </section>
     <section id="contact">
         <h2 lang="fr">Contact</h2>
         <h2 lang="en">Contact</h2>
         <h2 lang="zh">接触</h2>
+
+        <form action="envoyer.php" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <br>
+    
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+    
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br>
+    
+            <input type="submit" value="Envoyer">
+        </form>
     </section>
 
     <script src="script.js"></script>
