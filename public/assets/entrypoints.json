@@ -1,0 +1,52 @@
+{
+  "entrypoints": {
+    "index": {
+      "css": [
+        "http://localhost:8080/assets/index.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/index.js"
+      ]
+    },
+    "form": {
+      "css": [
+        "http://localhost:8080/assets/form.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/form.js"
+      ]
+    },
+    "compte": {
+      "css": [
+        "http://localhost:8080/assets/compte.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/compte.js"
+      ]
+    },
+    "terms": {
+      "css": [
+        "http://localhost:8080/assets/terms.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/terms.js"
+      ]
+    },
+    "project-nups": {
+      "css": [
+        "http://localhost:8080/assets/project-nups.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/project-nups.js"
+      ]
+    },
+    "nups": {
+      "css": [
+        "http://localhost:8080/assets/nups.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/nups.js"
+      ]
+    }
+  }
+}

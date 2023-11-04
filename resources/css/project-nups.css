@@ -1,0 +1,242 @@
+/* -------------------- autre -------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+*{
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+.titre_section{
+   position: relative;
+   font-family: 'Roboto', sans-serif;
+   font-size: 50px;
+   padding: 50px 0 0 60px;
+}
+
+.titre_section::before{
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 7px;
+   background: rgb(150, 150, 150);
+   bottom: 0;
+   box-shadow: 0 2px 2px #0000001F;
+}
+
+/* -------------------- autre -------------------- */
+
+/* -------------------- header -------------------- */
+
+header{
+   min-height: 100vh;
+   background: url(../../public/landing.jpg);
+   background-size: cover;
+}
+
+nav{
+   display: flex;
+   list-style: none;
+}
+
+nav li{
+   margin: 30px;
+   overflow: hidden;
+}
+
+nav a{
+   font-size: 20px;
+   font-weight: 600;
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   text-decoration: none;
+   position: relative;
+   display: block;
+   transition: transform 0.4s;
+}
+
+.logo{
+   width: 60px;
+}
+
+.big_title{
+   color: white;
+   font-size: 150px;
+   font-family: 'Roboto', sans-serif;
+   position: absolute;
+   top: 40%;
+   left: 10%;
+}
+/* -------------------- header -------------------- */
+
+/* -------------------- section explication -------------------- */
+
+.explication_contenaire{
+   padding: 0 100px;
+}
+
+.partie_1,
+.partie_2{
+  box-sizing: border-box;
+  margin: 10px auto 10px;
+  padding: 10px;
+  width: 80%; min-height: 220px;
+
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.image_parragraphe_1{
+   width : 150px;
+  border: none;
+  float: left;
+   border-radius: 10%;
+}
+
+.image_parragraphe_2{
+   width : 200px;
+  border: none;
+  float: right;
+   border-radius: 10%;
+}
+
+.space{
+  margin: 0, padding 0;
+  width: 0; height: 0;
+}
+
+/* -------------------- section explication -------------------- */
+
+/* -------------------- section download -------------------- */
+
+.download_link{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.btn_download{
+   text-decoration: none;
+   padding: 8px;
+   font-family: arial;
+   font-size: 1em;
+   color: #FFFFFF;
+   background-color: #0070c0;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border: 2px solid #00b0f0;
+   box-shadow: 3px 3px 4px #444444;
+   -webkit-box-shadow: 3px 3px 4px #444444;
+   -moz-box-shadow: 3px 3px 4px #444444;
+   margin-bottom: 10px;
+   transition: transform 0.2s ease;
+   width: 70%;
+   cursor: pointer;
+
+}
+   
+.btn_download:active{
+   transform: scale(1.05);
+}
+
+.logo_download{
+   width: 30px;
+}
+
+/* -------------------- section download -------------------- */
+
+/* -------------------- section version web -------------------- */
+
+#version_web p{
+   font-family: sans-serif;
+   font-size: 1em;
+   padding: 0 100px;
+}
+
+.btn_version_web{
+   text-decoration: none;
+   padding: 8px;
+   font-family: arial;
+   font-size: 1em;
+   color: #FFFFFF;
+   background-color: #0070c0;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border: 2px solid #00b0f0;
+   box-shadow: 3px 3px 4px #444444;
+   -webkit-box-shadow: 3px 3px 4px #444444;
+   -moz-box-shadow: 3px 3px 4px #444444;
+   margin-bottom: 10px;
+   transition: transform 0.2s ease;
+   width: 40%;
+   cursor: pointer;
+}
+
+.btn_version_web:active{
+   transform: scale(1.05);
+}
+
+.btn_version_web_contenaire{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+}
+
+/* -------------------- section version web -------------------- */
+
+/* -------------------- section autre -------------------- */
+
+#autre p{
+   font-family: sans-serif;
+   font-size: 1em;
+   padding: 0 100px;
+}
+
+#autre iframe {
+   padding: 20px 0 0 100px;
+}
+
+/* -------------------- section autre -------------------- */
+
+/* -------------------- footer -------------------- */
+
+.footer{
+   font-family: "Montserrat", sans-serif;
+   min-height: 100px;
+   display: flex;
+   align-items: center;
+   margin-top: 50px;
+   justify-content: space-between;
+   padding: 0 100px;
+   flex-wrap: wrap;
+   background-color: rgb(50, 50, 50);
+}
+
+.copyrights,
+#year{
+   padding-right: 20px;
+   color: white;
+   display: inline;
+   padding: 0;
+}
+
+.conditions_generale{
+   text-decoration: none;
+   font-weight: 600;
+   color: white;
+}
+
+/* -------------------- footer -------------------- */
+
+.dark-mode-theme {
+   background-color: #1c1c1e;
+   color: #fefefe;
+ }

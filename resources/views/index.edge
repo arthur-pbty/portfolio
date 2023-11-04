@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <title>Arthur</title>
+  @entryPointStyles('index')
+  @entryPointScripts('index')
+</head>
+<body>
+  <nav id="nav" class="fixed-navbar">
+    <ul class="nav-lien">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="btn_theme" id="toggle-btn">theme
+      <p id="text">claire</p>
+    </button>
+    <ul class="nav-compte">
+      @if(auth.user)
+        <li>Welcome {{ auth.user.pseudo }}</li>
+        <li><a href="{{ route('compte') }}">Compte</a></li>
+        <li><a href="{{ route('logout') }}">Logout</a></li>
+      @else
+        <li><a href="{{ route('auth') }}">Login</a></li>
+        <li><a href="{{ route('auth') }}">Signup</a></li>
+      @end
+    </ul>
+  </nav>
+  <nav class="mini-nav">
+    <button id="depli-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="4" rx="2" ry="2" fill="#000" />
+        <rect y="10" width="30" height="4" rx="2" ry="2" fill="#000" />
+        <rect y="20" width="30" height="4" rx="2" ry="2" fill="#000" />
+      </svg>      
+    </button>
+    <img src="/logo.png" alt="">
+  </nav>
+  <script>
+    const toggleBtn = document.getElementById("depli-nav");
+    const nav = document.getElementById("nav");
+    let toggle = "False";
+
+    toggleBtn.onclick = function(){
+      if(toggle === "False") {
+        nav.style.display = "flex";
+        toggle = "True";
+      } else {
+        nav.style.display = "none";
+        toggle = "False";
+      }
+    }
+  </script>
+  <main>
+    <div class="main-left">
+      <h1>Hi! 👋🏻<br>I'm Arthur.</h1>
+      <h2>Founder</h2>
+
+      <div class="barre-verticale">
+        <p>I am a young Frenchman with a passion for development, I am a self-taught learner and my creativity knows no limits. Every pixel I edit tells a story. Passionate about transforming ideas into visually captivating experiences, I create projects that push the boundaries of design innovation.</p>
+      </div>
+
+      <p class="citation">"In the middle of every difficulty lies opportunity."</p>
+      <p class="citation-auth">Albert Einstein</p>
+
+      <ul class="div-lien">
+        <a href="https://www.instagram.com/arthur.pbty/" target="_blank"><div><img src="/logo insta.png" alt="Logo">Instagram</div></a>
+        <a href="https://github.com/Tutur33" target="_blank"><div><img src="/logo github.png" alt="Logo">Github</div></a>
+        <a href="https://discord.gg/HxgaA44CPh" target="_blank"><div><img src="/Logo Discord.png" alt="Logo">Discord</div></a>
+        <a href="http://tuturp33.000webhostapp.com" target="_blank"><div><img src="/other.png" alt="Logo">Other...</div></a>
+      </ul>
+    </div>
+    <div class="main-right">
+      <img src="/pp.jpg" alt="Profile picture" class="pp">
+    </div>
+  </main>
+  <section id="about">
+    <h2>About</h2>
+    <p>Good morning ! I'm Arthur, a passionate developer based in France. My journey in the world of development is an inspiring adventure. Every line of code I write is a step toward creating unique and engaging experiences. I am driven by the desire to bring ideas to life and shape them into innovative designs.</p>
+
+    <h3>My background</h3>
+    <p>I gained experience in web development working on various projects, ranging from front-end to back-end. I have a deep command of languages like HTML, CSS, JavaScript, and have worked with modern frameworks like Adonis with Node.js.</p>
+
+    <h3>My philosophy</h3>
+    <p>I firmly believe that every difficulty is an opportunity to create something new and exciting. My approach is to combine functionality and aesthetics to deliver exceptional user experiences.</p>
+
+    <h3>My skills</h3>
+    <p>Web development, web design, application development, project management.</p>
+
+    <h3>My interests</h3>
+    <p>Outside of development, I love exploring new places, photography, and reading books about technology and creativity. And go sailing!</p>
+
+    <h3>My vision</h3>
+    <p>My visionMy goal is to continue to learn, innovate and inspire through my projects. I want to help create a better, more engaging web for everyone.</p>
+
+    <br>
+    <p>Please feel free to contact me if you have any questions or would like to collaborate on an exciting project. You can reach me via [your email address] or follow me on social media using the links below.</p>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="all_projects">
+      <div class="nups-project">
+        <a href="{{ route('nups') }}" target="_blank"><img src="/project-nups.png" alt=""></a>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <form class="formContact" action="envoyer.php" method="post">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+      <br>
+
+      <label for="email">E-mail :</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <br>
+
+      <input type="submit" value="Envoyer">
+    </form>
+  </section>
+  <footer id="footer" class="footer">
+    <span class="copyrights">&copy; <div id="year"></div> - Arthur Puechberty</span>
+    <a href="{{ route('terms') }}" class="conditions_generale" target="_blank">Terms and Conditions</a>
+  </footer>
+  <script>
+    var year = new Date().getFullYear();
+    document.getElementById("year").innerHTML = year;
+    
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        var input = document.getElementById('myInput');
+        if (input.value.trim() === '') {
+            event.preventDefault(); // Empêche la soumission du formulaire
+        } else {
+            this.action = "https://www.google.fr/search";
+        }
+    });
+  </script>
+</body>
+</html>
