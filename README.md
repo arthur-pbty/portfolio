@@ -1,67 +1,67 @@
-# Portfolio d'Arthur Puechberty
+# Arthur Puechberty's Portfolio
 
-Bienvenue sur mon portfolio personnel, conçu avec Adonis JS. Vous trouverez ici une présentation de moi-même, de mes projets, ainsi que les moyens de me contacter. Mon objectif est de partager mon parcours, mes compétences et mes réalisations en développement web.
+Welcome to my personal portfolio, designed with Adonis JS. Here you'll find a presentation of myself, my projects and how to contact me. My aim is to share my background, skills and achievements in web development.
 
-## Table des matières
+## Table of contents
 
-- [Aperçu](#aperçu)
-- [À propos](#à-propos)
-- [Projets](#projets)
+- [Overview](#overview)
+- [About us](#about-us)
+- [Projects](#projects)
 - [Contact](#contact)
-- [Licence](#licence)
+- [License](#license)
 
-## Aperçu
+## Overview
 
-Ce portfolio a été créé pour mettre en avant mon parcours en tant que développeur web autodidacte. Il est conçu pour être à la fois informatif et esthétiquement attrayant. Voici un aperçu de la page d'accueil :
+This portfolio has been created to showcase my career as a self-taught web developer. It is designed to be both informative and aesthetically appealing. Here's a preview of the home page:
 
-![Page d'accueil](ressource-readme/accueil.png)
+![Home page](ressource-readme/home-page.png)
 
-## À propos
+## About us
 
-### Présentation
+### Presentation
 
-Je m'appelle Arthur Puechberty et je suis passionné par le développement web. Chaque ligne de code que j'écris est une étape vers la création d'expériences uniques et engageantes. Je suis animé par le désir de donner vie à des idées et de les façonner en designs innovants.
+My name is Arthur Puechberty and I'm passionate about web development. Every line of code I write is a step towards creating unique and engaging experiences. I'm driven by the desire to bring ideas to life and shape them into innovative designs.
 
-### Mon parcours
+### My background
 
-J'ai acquis de l'expérience en développement web en travaillant sur divers projets, allant du front-end au back-end. J'ai une maîtrise des langages tels que HTML, CSS, JavaScript, et j'ai travaillé avec des frameworks modernes comme Adonis avec Node.js.
+I've gained experience in web development by working on various projects, from front-end to back-end. I'm proficient in languages such as HTML, CSS, JavaScript, and have worked with modern frameworks like Adonis with Node.js.
 
-### Ma philosophie
+### My philosophy
 
-Je crois fermement que chaque difficulté est une opportunité de créer quelque chose de nouveau et d'excitant. Mon approche consiste à combiner fonctionnalité et esthétique pour offrir des expériences exceptionnelles aux utilisateurs.
+I firmly believe that every challenge is an opportunity to create something new and exciting. My approach is to combine functionality and aesthetics to deliver exceptional user experiences.
 
-### Mes compétences
+### My skills
 
-- Développement web
+- Web development
 - Web design
-- Développement d'applications
-- Gestion de projets
+- Application development
+- Project management
 
-### Mes centres d'intérêt
+### My interests
 
-En dehors du développement, j'aime explorer de nouveaux endroits, la photographie, la lecture de livres sur la technologie et la créativité, et la voile !
+Outside of development, I enjoy exploring new places, photography, reading books on technology and creativity, and sailing!
 
-### Ma vision
+### My vision
 
-Mon objectif est de continuer à apprendre, à innover et à inspirer à travers mes projets. Je veux contribuer à créer un web meilleur et plus engageant pour tous.
+My goal is to continue learning, innovating and inspiring through my projects. I want to help create a better, more engaging web for everyone.
 
-## Projets
+## Projects
 
-### Projet NUPS
+### NUPS project
 
-NUPS est l'un de mes projets les plus récents. 
+NUPS is one of my most recent projects.
 
-![Projet NUPS](ressource-readme/nups.png)
+![NUPS project](ressource-readme/nups.png)
 
 ## Contact
 
-N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez collaborer sur un projet passionnant. Vous pouvez me joindre par e-mail à [email@exemple.com] ou me suivre sur les réseaux sociaux en utilisant les liens ci-dessous.
+Please don't hesitate to contact me if you have any questions or would like to collaborate on an exciting project. You can reach me by e-mail at [email@exemple.com] or follow me on social networks using the links below.
 
 - [Instagram](https://www.instagram.com/arthur.pbty/)
 - [GitHub](https://github.com/Tutur33)
 - [Discord](https://discord.gg/HxgaA44CPh)
-- [Site Web](http://tuturp33.000webhostapp.com)
+- [Other networks](http://tuturp33.000webhostapp.com)
 
-## Licence
+## License
 
-Ce projet est sous licence [MIT](LICENSE).
+This project is under [proprietary license](LICENSE).
