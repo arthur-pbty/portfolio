@@ -10,4 +10,8 @@ export default class ProjectsController {
     return view.render('projects/nups/nups')
   }
 
+  async myNetwork({ view }: HttpContextContract) {
+    return view.render('projects/myNetwork/index')
+  }
+
 }

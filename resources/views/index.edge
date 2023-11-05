@@ -107,6 +107,9 @@
       <div class="nups-project">
         <a href="{{ route('nups') }}" target="_blank"><img src="/project-nups.png" alt=""></a>
       </div>
+      <div class="my-networks-project">
+        <a href="{{ route('myNetwork') }}" target="_blank"><img src="/my-networks.jpg" alt=""></a>
+      </div>
     </div>
   </section>
   <section id="contact">
@@ -128,22 +131,6 @@
       <input type="submit" value="Envoyer">
     </form>
   </section>
-  <footer id="footer" class="footer">
-    <span class="copyrights">&copy; <div id="year"></div> - Arthur Puechberty</span>
-    <a href="{{ route('terms') }}" class="conditions_generale" target="_blank">Terms and Conditions</a>
-  </footer>
-  <script>
-    var year = new Date().getFullYear();
-    document.getElementById("year").innerHTML = year;
-    
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        var input = document.getElementById('myInput');
-        if (input.value.trim() === '') {
-            event.preventDefault(); // Empêche la soumission du formulaire
-        } else {
-            this.action = "https://www.google.fr/search";
-        }
-    });
-  </script>
+  @include('components/foother')
 </body>
 </html>

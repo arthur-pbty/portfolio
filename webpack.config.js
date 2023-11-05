@@ -51,6 +51,7 @@ Encore.addEntry('compte', './resources/css/compte.css')
 Encore.addEntry('terms', './resources/css/terms.css')
 Encore.addEntry('project-nups', './resources/css/project-nups.css')
 Encore.addEntry('nups', './resources/css/nups.css')
+Encore.addEntry('my-network-project', './resources/css/my-network-project.css')
 
 /*
 |--------------------------------------------------------------------------

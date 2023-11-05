@@ -47,6 +47,14 @@
       "js": [
         "http://localhost:8080/assets/nups.js"
       ]
+    },
+    "my-network-project": {
+      "css": [
+        "http://localhost:8080/assets/my-network-project.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/my-network-project.js"
+      ]
     }
   }
 }

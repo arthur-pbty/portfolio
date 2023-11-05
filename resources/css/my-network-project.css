@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+
+.btn {
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 4px;
+    background-color: #222222;
+    transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
+    background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 width="1296px" height="768px" viewBox="0 0 1296 768" enable-background="new 0 0 1296 768" xml:space="preserve"><g><polygon fill="#8694D1" points="766.6,1.2 -0.2,768 200.7,768 967.5,1.2 	"/></g><g><polygon fill="#8694D1" points="1094.8,1.2 328,768 528.9,768 1295.7,1.2 	"/></g></svg>');
+    background-size: contain;
+    background-position: -200px center;
+    background-repeat: no-repeat;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+}
+.btn:hover {
+    transform: scale(1.04);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.btn:active {
+    transform: scale(0.5);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.txt_lien{
+    width : 100%;
+    text-align: center;
+    padding-right: 48px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+div{
+    padding: 8px;
+}
+
+.accueil{
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 64px 16px 32px;
+}
+
+.profil_img{
+    border-radius: 50%;
+    width : 100px;
+    height : 100px;
+}
+
+h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 8px;
+}
+
+.liste_btn{
+    margin: 0px auto;
+    max-width: 680px;
+}
+
+.lien_img{
+    width : 48px;
+    height : 48px;
+    border-radius: 9px;
+}

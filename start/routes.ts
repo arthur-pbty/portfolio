@@ -33,5 +33,6 @@ Route.post('/modifemail', 'ComptesController.modifemail').as('modifemail')
 
 Route.get('/projects/nups', 'ProjectsController.nups').as('nups')
 Route.get('/projects/nups/web', 'ProjectsController.nupsWeb').as('nups-web')
+Route.get('/projects/my-networks', 'ProjectsController.myNetwork').as('myNetwork')
 
 Route.get('/terms', 'TermsController.index').as('terms')

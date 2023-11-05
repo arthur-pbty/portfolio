@@ -258,37 +258,6 @@ main {
   border-radius: 7px;
 }
 
-.footer{
-  font-family: "Montserrat", sans-serif;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-  justify-content: space-between;
-  padding: 0 100px;
-  flex-wrap: wrap;
-  background-color: rgb(50, 50, 50);
-}
-
-.copyrights{
-  padding-right: 20px;
-  color: white;
-}
-
-.copyrights,
-#year {
-  padding-right: 20px;
-  color: #9aa0a6;
-  display: inline;
-  padding: 0;
-}
-
-.conditions_generale {
-  text-decoration: none;
-  font-weight: 600;
-  color: #9aa0a6;
-}
-
 .btn_theme {
   background-color:rgba(255, 255, 255, 0);
   color: rgb(83, 83, 83);

@@ -11,5 +11,7 @@
   "assets/project-nups.js": "http://localhost:8080/assets/project-nups.js",
   "assets/nups.css": "http://localhost:8080/assets/nups.css",
   "assets/nups.js": "http://localhost:8080/assets/nups.js",
+  "assets/my-network-project.css": "http://localhost:8080/assets/my-network-project.css",
+  "assets/my-network-project.js": "http://localhost:8080/assets/my-network-project.js",
   "assets/images/landing.jpg": "http://localhost:8080/assets/images/landing.6d6841c3.jpg"
 }
