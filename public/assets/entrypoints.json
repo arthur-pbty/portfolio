@@ -55,6 +55,14 @@
       "js": [
         "http://localhost:8080/assets/my-network-project.js"
       ]
+    },
+    "journal": {
+      "css": [
+        "http://localhost:8080/assets/journal.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/journal.js"
+      ]
     }
   }
 }

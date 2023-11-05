@@ -14,4 +14,8 @@ export default class ProjectsController {
     return view.render('projects/myNetwork/index')
   }
 
+  async journal({ view }: HttpContextContract) {
+    return view.render('projects/journal/index')
+  }
+
 }

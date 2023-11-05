@@ -52,6 +52,7 @@ Encore.addEntry('terms', './resources/css/terms.css')
 Encore.addEntry('project-nups', './resources/css/project-nups.css')
 Encore.addEntry('nups', './resources/css/nups.css')
 Encore.addEntry('my-network-project', './resources/css/my-network-project.css')
+Encore.addEntry('journal', './resources/css/journal.css')
 
 /*
 |--------------------------------------------------------------------------
