@@ -1,0 +1,20 @@
+{
+  "entrypoints": {
+    "index": {
+      "css": [
+        "/assets/index.7668700c.css"
+      ],
+      "js": [
+        "/assets/index.31d6cfe0.js"
+      ]
+    },
+    "form": {
+      "css": [
+        "/assets/form.d255c0c6.css"
+      ],
+      "js": [
+        "/assets/form.31d6cfe0.js"
+      ]
+    }
+  }
+}

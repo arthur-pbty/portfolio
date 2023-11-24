@@ -1,0 +1,31 @@
+@if(flashMessages.has('success'))
+   <div class="alert alert-success">
+      {{ flashMessages.get('success') }}
+   </div>
+@end
+
+@if(flashMessages.has('error'))
+   <div class="alert alert-danger">
+      {{ flashMessages.get('error') }}
+   </div>
+@end
+
+
+
+@if(flashMessages.has('errors.pseudo'))
+   <div class="alert alert-danger">
+      {{ flashMessages.get('errors.pseudo') }}
+   </div>
+@end
+
+@if(flashMessages.has('errors.email'))
+   <div class="alert alert-danger">
+      {{ flashMessages.get('errors.email') }}
+   </div>
+@end
+
+@if(flashMessages.has('errors.password'))
+   <div class="alert alert-danger">
+      {{ flashMessages.get('errors.password') }}
+   </div>
+@end
