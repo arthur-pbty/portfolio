@@ -1,31 +1,71 @@
 @if(flashMessages.has('success'))
-   <div class="alert alert-success">
+   <div class="flash-success">
       {{ flashMessages.get('success') }}
    </div>
 @end
 
 @if(flashMessages.has('error'))
-   <div class="alert alert-danger">
+   <div class="flash-error">
       {{ flashMessages.get('error') }}
    </div>
 @end
 
+<style>
+   .flash-success {
+      color: #155724; /* Couleur du texte */
+      background-color: #d4edda; /* Couleur de l'arrière-plan */
+      border-color: #c3e6cb; /* Couleur de la bordure */
+
+      /* Style de la bordure */
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+      padding: 0.75rem 1.25rem; /* Espacement interne */
+
+      /* Styles supplémentaires pour le texte et les liens */
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+
+      /* Ombre légère */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+
+   .flash-error {
+      color: #721c24; /* Couleur du texte */
+      background-color: #f8d7da; /* Couleur de l'arrière-plan */
+      border-color: #f5c6cb; /* Couleur de la bordure */
+
+      /* Style de la bordure */
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+      padding: 0.75rem 1.25rem; /* Espacement interne */
+
+      /* Styles supplémentaires pour le texte et les liens */
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+
+      /* Ombre légère */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+</style>
+
 
 
 @if(flashMessages.has('errors.pseudo'))
-   <div class="alert alert-danger">
+   <div class="flash-error">
       {{ flashMessages.get('errors.pseudo') }}
    </div>
 @end
 
 @if(flashMessages.has('errors.email'))
-   <div class="alert alert-danger">
+   <div class="flash-error">
       {{ flashMessages.get('errors.email') }}
    </div>
 @end
 
 @if(flashMessages.has('errors.password'))
-   <div class="alert alert-danger">
+   <div class="flash-error">
       {{ flashMessages.get('errors.password') }}
    </div>
 @end
