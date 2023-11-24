@@ -1,0 +1,521 @@
+{
+  "commands": {
+    "build": {
+      "settings": {},
+      "commandPath": "./commands/Build",
+      "commandName": "build",
+      "description": "Compile project from Typescript to Javascript. Also compiles the frontend assets if using webpack encore",
+      "args": [],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "production",
+          "propertyName": "production",
+          "type": "boolean",
+          "description": "Build for production",
+          "alias": "prod"
+        },
+        {
+          "name": "assets",
+          "propertyName": "assets",
+          "type": "boolean",
+          "description": "Build frontend assets when webpack encore is installed. Use --no-assets to disable"
+        },
+        {
+          "name": "ignore-ts-errors",
+          "propertyName": "ignoreTsErrors",
+          "type": "boolean",
+          "description": "Ignore typescript errors and complete the build process"
+        },
+        {
+          "name": "tsconfig",
+          "propertyName": "tsconfig",
+          "type": "string",
+          "description": "Path to the TypeScript project configuration file"
+        },
+        {
+          "name": "encore-args",
+          "propertyName": "encoreArgs",
+          "type": "array",
+          "description": "CLI options to pass to the encore command line"
+        },
+        {
+          "name": "client",
+          "propertyName": "client",
+          "type": "string",
+          "description": "Select the package manager to decide which lock file to copy to the build folder"
+        }
+      ]
+    },
+    "configure": {
+      "settings": {},
+      "commandPath": "./commands/Invoke",
+      "commandName": "configure",
+      "description": "Configure one or more AdonisJS packages",
+      "args": [
+        {
+          "type": "spread",
+          "propertyName": "packages",
+          "name": "packages",
+          "required": true,
+          "description": "Name of the package(s) you want to configure"
+        }
+      ],
+      "aliases": [
+        "invoke"
+      ],
+      "flags": []
+    },
+    "make:command": {
+      "settings": {},
+      "commandPath": "./commands/Make/Command",
+      "commandName": "make:command",
+      "description": "Make a new ace command",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the command class"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the command with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:controller": {
+      "settings": {},
+      "commandPath": "./commands/Make/Controller",
+      "commandName": "make:controller",
+      "description": "Make a new HTTP controller",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the controller class"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "resource",
+          "propertyName": "resource",
+          "type": "boolean",
+          "description": "Add resourceful methods to the controller class",
+          "alias": "r"
+        },
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the controller with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:exception": {
+      "settings": {},
+      "commandPath": "./commands/Make/Exception",
+      "commandName": "make:exception",
+      "description": "Make a new custom exception class",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the exception class"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "self-handle",
+          "propertyName": "selfHandle",
+          "type": "boolean",
+          "description": "Add the handle method to self handle the exception"
+        },
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the exception class with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:listener": {
+      "settings": {},
+      "commandPath": "./commands/Make/Listener",
+      "commandName": "make:listener",
+      "description": "Make a new event listener class",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the event listener class"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the listener with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:middleware": {
+      "settings": {},
+      "commandPath": "./commands/Make/Middleware",
+      "commandName": "make:middleware",
+      "description": "Make a new middleware",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the middleware class"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the middleware with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:prldfile": {
+      "settings": {},
+      "commandPath": "./commands/Make/PreloadFile",
+      "commandName": "make:prldfile",
+      "description": "Make a new preload file",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the file"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "environment",
+          "propertyName": "environment",
+          "type": "array",
+          "description": "Define the preload file environment. Accepted values \"console,web,repl,test\""
+        }
+      ]
+    },
+    "make:provider": {
+      "settings": {},
+      "commandPath": "./commands/Make/Provider",
+      "commandName": "make:provider",
+      "description": "Make a new provider class",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the provider class"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "ace",
+          "propertyName": "ace",
+          "type": "boolean",
+          "description": "Register provider under the ace providers array"
+        },
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the provider with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:suite": {
+      "settings": {},
+      "commandPath": "./commands/Make/Suite",
+      "commandName": "make:suite",
+      "description": "Create a new test suite",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "suite",
+          "name": "suite",
+          "required": true,
+          "description": "Name of the test suite"
+        },
+        {
+          "type": "string",
+          "propertyName": "location",
+          "name": "location",
+          "required": false,
+          "description": "Path to the test suite directory"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "with-example-test",
+          "propertyName": "withExampleTest",
+          "type": "boolean",
+          "description": "Add a sample test file"
+        }
+      ]
+    },
+    "make:test": {
+      "settings": {},
+      "commandPath": "./commands/Make/Test",
+      "commandName": "make:test",
+      "description": "Make a new test",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "suite",
+          "name": "suite",
+          "required": true,
+          "description": "Name of the test suite"
+        },
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the test file"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the test file with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:validator": {
+      "settings": {},
+      "commandPath": "./commands/Make/Validator",
+      "commandName": "make:validator",
+      "description": "Make a new validator",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the validator class"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the validator with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "make:view": {
+      "settings": {},
+      "commandPath": "./commands/Make/View",
+      "commandName": "make:view",
+      "description": "Make a new view template",
+      "args": [
+        {
+          "type": "string",
+          "propertyName": "name",
+          "name": "name",
+          "required": true,
+          "description": "Name of the view"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "exact",
+          "propertyName": "exact",
+          "type": "boolean",
+          "description": "Create the template file with the exact name as provided",
+          "alias": "e"
+        }
+      ]
+    },
+    "serve": {
+      "settings": {
+        "stayAlive": true
+      },
+      "commandPath": "./commands/Serve",
+      "commandName": "serve",
+      "description": "Start the AdonisJS HTTP server, along with the file watcher. Also starts the webpack dev server when webpack encore is installed",
+      "args": [],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "assets",
+          "propertyName": "assets",
+          "type": "boolean",
+          "description": "Start webpack dev server when encore is installed. Use \"--no-assets\" to disable"
+        },
+        {
+          "name": "watch",
+          "propertyName": "watch",
+          "type": "boolean",
+          "description": "Watch for file changes and re-start the HTTP server on change",
+          "alias": "w"
+        },
+        {
+          "name": "poll",
+          "propertyName": "poll",
+          "type": "boolean",
+          "description": "Detect file changes by polling files instead of listening to filesystem events",
+          "alias": "p"
+        },
+        {
+          "name": "node-args",
+          "propertyName": "nodeArgs",
+          "type": "array",
+          "description": "CLI options to pass to the node command line"
+        },
+        {
+          "name": "encore-args",
+          "propertyName": "encoreArgs",
+          "type": "array",
+          "description": "CLI options to pass to the encore command line"
+        }
+      ]
+    },
+    "test": {
+      "settings": {
+        "stayAlive": true
+      },
+      "commandPath": "./commands/Test",
+      "commandName": "test",
+      "description": "Run AdonisJS tests",
+      "args": [
+        {
+          "type": "spread",
+          "propertyName": "suites",
+          "name": "suites",
+          "required": false,
+          "description": "Run tests for only the specified suites"
+        }
+      ],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "files",
+          "propertyName": "files",
+          "type": "array",
+          "description": "Run tests for the mentioned files only"
+        },
+        {
+          "name": "watch",
+          "propertyName": "watch",
+          "type": "boolean",
+          "description": "Watch for file changes and re-run tests on file change",
+          "alias": "w"
+        },
+        {
+          "name": "poll",
+          "propertyName": "poll",
+          "type": "boolean",
+          "description": "Detect file changes by polling files instead of listening to filesystem events",
+          "alias": "p"
+        },
+        {
+          "name": "node-args",
+          "propertyName": "nodeArgs",
+          "type": "array",
+          "description": "CLI options to pass to the node command line"
+        },
+        {
+          "name": "tags",
+          "propertyName": "tags",
+          "type": "array",
+          "description": "Filter tests by tags"
+        },
+        {
+          "name": "ignore-tags",
+          "propertyName": "ignoreTags",
+          "type": "array",
+          "description": "Filter tests by ignoring tags"
+        },
+        {
+          "name": "tests",
+          "propertyName": "tests",
+          "type": "array",
+          "description": "Filter tests by title"
+        },
+        {
+          "name": "groups",
+          "propertyName": "groups",
+          "type": "array",
+          "description": "Filter tests by group title"
+        },
+        {
+          "name": "timeout",
+          "propertyName": "timeout",
+          "type": "number",
+          "description": "Customize tests timeout"
+        },
+        {
+          "name": "force-exit",
+          "propertyName": "forceExit",
+          "type": "boolean",
+          "description": "Force exit the tests runner process"
+        }
+      ]
+    },
+    "type-check": {
+      "settings": {},
+      "commandPath": "./commands/TypeCheck",
+      "commandName": "type-check",
+      "description": "Type check TypeScript source without writing the compiled output on disk",
+      "args": [],
+      "aliases": [],
+      "flags": [
+        {
+          "name": "tsconfig",
+          "propertyName": "tsconfig",
+          "type": "string",
+          "description": "Path to the TypeScript project configuration file"
+        }
+      ]
+    }
+  },
+  "aliases": {
+    "invoke": "configure"
+  }
+}
