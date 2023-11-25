@@ -2,66 +2,66 @@
   "entrypoints": {
     "index": {
       "css": [
-        "/assets/index.c6bb0e40.css"
+        "http://localhost:8080/assets/index.css"
       ],
       "js": [
-        "/assets/index.426cec9e.js"
+        "http://localhost:8080/assets/index.js"
       ]
     },
     "form": {
       "css": [
-        "/assets/form.d255c0c6.css"
+        "http://localhost:8080/assets/form.css"
       ],
       "js": [
-        "/assets/form.31d6cfe0.js"
+        "http://localhost:8080/assets/form.js"
       ]
     },
     "compte": {
       "css": [
-        "/assets/compte.753baa5d.css"
+        "http://localhost:8080/assets/compte.css"
       ],
       "js": [
-        "/assets/compte.31d6cfe0.js"
+        "http://localhost:8080/assets/compte.js"
       ]
     },
     "terms": {
       "css": [
-        "/assets/terms.81e389a9.css"
+        "http://localhost:8080/assets/terms.css"
       ],
       "js": [
-        "/assets/terms.31d6cfe0.js"
+        "http://localhost:8080/assets/terms.js"
       ]
     },
     "project-nups": {
       "css": [
-        "/assets/project-nups.bc10365c.css"
+        "http://localhost:8080/assets/project-nups.css"
       ],
       "js": [
-        "/assets/project-nups.31d6cfe0.js"
+        "http://localhost:8080/assets/project-nups.js"
       ]
     },
     "nups": {
       "css": [
-        "/assets/nups.1cfcc6cb.css"
+        "http://localhost:8080/assets/nups.css"
       ],
       "js": [
-        "/assets/nups.31d6cfe0.js"
+        "http://localhost:8080/assets/nups.js"
       ]
     },
     "my-network-project": {
       "css": [
-        "/assets/my-network-project.75c72c57.css"
+        "http://localhost:8080/assets/my-network-project.css"
       ],
       "js": [
-        "/assets/my-network-project.31d6cfe0.js"
+        "http://localhost:8080/assets/my-network-project.js"
       ]
     },
     "journal": {
       "css": [
-        "/assets/journal.f506c653.css"
+        "http://localhost:8080/assets/journal.css"
       ],
       "js": [
-        "/assets/journal.31d6cfe0.js"
+        "http://localhost:8080/assets/journal.js"
       ]
     }
   }
