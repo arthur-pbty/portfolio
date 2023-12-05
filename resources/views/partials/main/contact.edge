@@ -1,0 +1,35 @@
+<section id="contact" class="pt-32 mx-24 mb-24">
+  <h2 class="text-2xl font-bold mb-10">Contact</h2>
+
+  @component('components/form/form', {
+    'action': '#',
+    'method': 'post',
+  }) 
+    @!component('components/form/field', {
+      'label': 'Nom :',
+      'name': 'nom',
+      'type': 'text',
+      'required': true,
+      'placeholder': 'Votre nom',
+    })
+    @!component('components/form/field', {
+      'label': 'E-mail :',
+      'name': 'email',
+      'type': 'email',
+      'required': true,
+      'placeholder': 'prenom.nom@mail.com',
+    })
+    @!component('components/form/field', {
+      'label': 'Message :',
+      'name': 'message',
+      'type': 'textarea',
+      'rows': 4,
+      'required': true,
+    })
+    @!component('components/form/button', {
+      'type': 'submit',
+      'text': 'Envoyer',
+    })
+  @end
+
+</section>

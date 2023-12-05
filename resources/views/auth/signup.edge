@@ -1,0 +1,60 @@
+@layout('layouts/main')
+@set('title', 'Signup')
+
+@section('body')
+
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <img class="mx-auto h-10 w-auto" src="/favicon.ico">
+    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight">Create your account</h2>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+
+    @component('components/form/form', {
+      'action': '',
+      'method': 'post',
+    }) 
+      @!component('components/form/field', {
+        'label': 'Pseudo :',
+        'name': 'pseudo',
+        'type': 'text',
+        'required': true,
+        'placeholder': 'Votre nom',
+      })
+      @!component('components/form/field', {
+        'label': 'E-mail :',
+        'name': 'email',
+        'type': 'email',
+        'required': true,
+        'placeholder': 'exemple@mail.com',
+      })
+      @!component('components/form/field', {
+        'label': 'Mot de passe :',
+        'name': 'password',
+        'type': 'password',
+        'required': true,
+        'placeholder': 'Votre mot de passe',
+      })
+      @!component('components/form/field', {
+        'label': 'Confirmer le mot de passe :',
+        'name': 'password_confirmation',
+        'type': 'password',
+        'required': true,
+        'placeholder': 'Votre mot de passe',
+      })
+      @!component('components/form/button', {
+        'type': 'submit',
+        'text': 'Envoyer',
+        'style': 'flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
+      })
+    @end
+
+    <p class="mt-10 text-center text-sm text-gray-500">
+      Not a member?
+      <a href="{{ route('login') }}" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Sign in to your account</a>
+    </p>
+  </div>
+</div>
+
+@end

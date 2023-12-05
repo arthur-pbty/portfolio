@@ -1,0 +1,22 @@
+<footer 
+  id="footer" 
+  class="font-semibold min-h-100 flex items-center mt-16 justify-between px-20 bg-gray-800 text-gray-400 px- h-28">
+  <span>&copy; <span id="year"></span> - Arthur Puechberty</span>
+
+  <a href="{{ route('terms') }}" target="_blank">Terms and Conditions</a>
+</footer>
+
+
+<script>
+  var year = new Date().getFullYear();
+  document.getElementById("year").innerHTML = year;
+  
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+      var input = document.getElementById('myInput');
+      if (input.value.trim() === '') {
+          event.preventDefault();
+      } else {
+          this.action = "https://www.google.fr/search";
+      }
+  });
+</script>

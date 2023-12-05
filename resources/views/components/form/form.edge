@@ -1,0 +1,4 @@
+<form method="{{ method }}" action="{{ action }}">
+  @!component('components/flash')
+  {{{ await $slots.main() }}}
+</form>

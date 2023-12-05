@@ -1,0 +1,17 @@
+@layout('layouts/main')
+@set('title', 'Arthur - Portfolio')
+
+@section('body')
+
+@include('partials/nav')
+@include('partials/header')
+
+<main>
+   @include('partials/main/about')
+   @include('partials/main/projects')
+   @include('partials/main/contact')
+</main>
+
+@include('partials/footer')
+
+@end

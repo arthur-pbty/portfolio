@@ -45,14 +45,7 @@ Encore.setPublicPath('/assets')
 | entrypoints.
 |
 */
-Encore.addEntry('index', './resources/js/index.js')
-Encore.addEntry('form', './resources/css/form.css')
-Encore.addEntry('compte', './resources/css/compte.css')
-Encore.addEntry('terms', './resources/css/terms.css')
-Encore.addEntry('project-nups', './resources/css/project-nups.css')
-Encore.addEntry('nups', './resources/css/nups.css')
-Encore.addEntry('my-network-project', './resources/css/my-network-project.css')
-Encore.addEntry('journal', './resources/css/journal.css')
+Encore.addEntry('app', './resources/js/app.js')
 
 /*
 |--------------------------------------------------------------------------
@@ -176,7 +169,7 @@ Encore.configureDevServerOptions((options) => {
 | PostCSS or CSS.
 |
 */
-// Encore.enablePostCssLoader()
+Encore.enablePostCssLoader()
 // Encore.configureCssLoader(() => {})
 
 /*

@@ -1,0 +1,30 @@
+<div class="mb-4">
+  <label for="{{ name }}" class="block text-gray-700 text-sm font-bold mb-2">{{ label }}</label>
+  
+  @if(type === 'textarea')
+    <textarea
+      id="{{ name }}"
+      name="{{ name }}"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      @if(required)
+        required
+      @end
+      @if(rows)
+        rows="{{ rows }}"
+      @end
+      ></textarea>
+  @else
+    <input
+      id="{{ name }}"
+      name="{{ name }}"
+      type="{{ type ? type : 'text' }}"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      @if(required)
+        required
+      @end
+      @if(placeholder)
+        placeholder="{{ placeholder }}"
+      @end
+    >
+  @end
+</div>

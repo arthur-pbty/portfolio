@@ -1,19 +1,4 @@
 {
-  "assets/index.css": "/assets/index.f1f9732c.css",
-  "assets/index.js": "/assets/index.81737fb2.js",
-  "assets/form.css": "/assets/form.d255c0c6.css",
-  "assets/form.js": "/assets/form.31d6cfe0.js",
-  "assets/compte.css": "/assets/compte.753baa5d.css",
-  "assets/compte.js": "/assets/compte.31d6cfe0.js",
-  "assets/terms.css": "/assets/terms.81e389a9.css",
-  "assets/terms.js": "/assets/terms.31d6cfe0.js",
-  "assets/project-nups.css": "/assets/project-nups.bc10365c.css",
-  "assets/project-nups.js": "/assets/project-nups.31d6cfe0.js",
-  "assets/nups.css": "/assets/nups.1cfcc6cb.css",
-  "assets/nups.js": "/assets/nups.31d6cfe0.js",
-  "assets/my-network-project.css": "/assets/my-network-project.75c72c57.css",
-  "assets/my-network-project.js": "/assets/my-network-project.31d6cfe0.js",
-  "assets/journal.css": "/assets/journal.f506c653.css",
-  "assets/journal.js": "/assets/journal.31d6cfe0.js",
-  "assets/images/landing.jpg": "/assets/images/landing.6d6841c3.jpg"
+  "assets/app.css": "http://localhost:8080/assets/app.css",
+  "assets/app.js": "http://localhost:8080/assets/app.js"
 }

@@ -20,20 +20,15 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', 'HomeController.index').as('home')
+Route.get('/', async ({ view }) => {
+  return view.render('home')
+}).as('home')
 
-Route.get('/auth', 'AuthController.index').as('auth')
-Route.post('/login', 'AuthController.login').as('login')
-Route.post('/signup', 'AuthController.signup').as('signup')
-Route.get('/logout', 'AuthController.logout').as('logout')
+Route.get('/terms', async ({ view }) => {
+  return view.render('terms')
+}).as('terms')
 
-Route.get('/compte', 'ComptesController.index').as('compte')
-Route.post('/modifpseudo', 'ComptesController.modifpseudo').as('modifpseudo')
-Route.post('/modifemail', 'ComptesController.modifemail').as('modifemail')
-
-Route.get('/projects/nups', 'ProjectsController.nups').as('nups')
-Route.get('/projects/nups/web', 'ProjectsController.nupsWeb').as('nups-web')
-Route.get('/projects/my-networks', 'ProjectsController.myNetwork').as('myNetwork')
-Route.get('/projects/journal', 'ProjectsController.journal').as('journal')
-
-Route.get('/terms', 'TermsController.index').as('terms')
+Route.get('/auth/login', 'AuthController.login').as('login')
+Route.post('/auth/login', 'AuthController.doLogin')
+Route.get('/auth/signup', 'AuthController.signup').as('signup')
+Route.post('/auth/signup', 'AuthController.doSignup')
