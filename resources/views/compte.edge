@@ -1,0 +1,67 @@
+@layout('layouts/main')
+@set('title', 'Compte')
+
+@section('body')
+
+<main class="m-24">
+
+  @!component('components/flash')
+
+  <h1 class="text-4xl font-bold mb-9">Welcome {{ auth.user.pseudo }}</h1>
+
+  <a href="{{ route('home') }}"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+    >return to home page</a>
+
+  <div>
+    <h2 class="text-2xl font-bold mb-3 mt-9">Here is your personal information:</h2>
+    <p>pseudo : {{ auth.user.pseudo }}</p>
+    <p>email : {{ auth.user.email }}</p>
+    <p>created at : {{ auth.user.createdAt }}</p>
+  </div>
+
+  <div id="settings">
+    <h2 class="text-2xl font-bold mb-5 mt-9">You can modify your personal information:</h2>
+
+    @component('components/form/form', {
+      'action': 'modifpseudo',
+      'method': 'post',
+      'flash': 'not',
+    }) 
+      @!component('components/form/field', {
+        'label': 'Pseudo :',
+        'name': 'pseudo',
+        'type': 'text',
+        'required': true,
+        'placeholder': 'new pseudo',
+      })
+      @!component('components/form/button', {
+        'type': 'submit',
+        'text': 'Envoyer',
+      })
+    @end
+
+    <div class="mt-5"></div>
+
+    @component('components/form/form', {
+      'action': 'modifemail',
+      'method': 'post',
+      'flash': 'not',
+    }) 
+      @!component('components/form/field', {
+        'label': 'Email :',
+        'name': 'email',
+        'type': 'text',
+        'required': true,
+        'placeholder': 'new email',
+      })
+      @!component('components/form/button', {
+        'type': 'submit',
+        'text': 'Envoyer',
+      })
+    @end
+  </div>
+
+</main>
+
+@end

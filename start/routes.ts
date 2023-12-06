@@ -32,3 +32,9 @@ Route.get('/auth/login', 'AuthController.login').as('login')
 Route.post('/auth/login', 'AuthController.doLogin')
 Route.get('/auth/signup', 'AuthController.signup').as('signup')
 Route.post('/auth/signup', 'AuthController.doSignup')
+
+Route.get('/compte', 'CompteController.index').as('compte')
+Route.post('/modifpseudo', 'CompteController.modifpseudo')
+Route.post('/modifemail', 'CompteController.modifemail')
+
+Route.get('/auth/logout', 'AuthController.logout').as('logout')

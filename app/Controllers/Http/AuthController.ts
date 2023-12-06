@@ -21,6 +21,7 @@ export default class AuthController {
       response.redirect().toRoute('login')
     }
   }
+  
 
   async signup({ view }: HttpContextContract) {
     return view.render('auth/signup')
@@ -31,4 +32,10 @@ export default class AuthController {
     await User.create(playload)
     return response.redirect().toRoute('home')
   }
+
+
+  async logout({ auth, response }:HttpContextContract) {
+    await auth.logout()
+    return response.redirect().back()
+ }
 }

@@ -53,15 +53,14 @@
 
               <!-- Dropdown menu -->
               <div x-show="profileMenuOpen" @click.away="profileMenuOpen = false" x-cloak class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Your Profile</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Settings</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Sign out</a>
+                <a href="{{ route('compte') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Your Profile</a>
+                <a href="{{ route('compte') }}#settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Settings</a>
+                <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Sign out</a>
               </div>
             </div>
           @else
-            {{ auth.user }}
-            <a href="{{ route('login') }}">Login</a>
-            <a href="{{ route('signup') }}">Signup</a>
+            <a href="{{ route('login') }}" class="mr-2 text-gray-300">Login</a>
+            <a href="{{ route('signup') }}" class="text-gray-300">Signup</a>
           @end
         </div>
     </div>
