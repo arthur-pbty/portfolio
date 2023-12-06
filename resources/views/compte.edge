@@ -17,8 +17,17 @@
     <h2 class="text-2xl font-bold mb-3 mt-9">Here is your personal information:</h2>
     <p>pseudo : {{ auth.user.pseudo }}</p>
     <p>email : {{ auth.user.email }}</p>
-    <p>created at : {{ auth.user.createdAt }}</p>
+    <p>created at : <span id="formattedDate"></span></p>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const createdAt = "{{ auth.user.createdAt }}";
+      const maDate = createdAt.substring(8, 10) + '/' + createdAt.substring(5, 7) + '/' + createdAt.substring(0, 4);
+      document.getElementById('formattedDate').innerText = maDate;
+    });
+  </script>
+  
 
   <div id="settings">
     <h2 class="text-2xl font-bold mb-5 mt-9">You can modify your personal information:</h2>
@@ -64,20 +73,27 @@
 
 
 
-  <div>
+  <div class="mt-12">
     <img class="h-32 w-32 rounded-full" src="{{ auth.user.avatarUrl }}" alt="">
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data" class="mt-4">
       <label for="avatar">Avatar :</label>
       <input type="file" name="avatar" id="avatar">
 
-      <button type=""submit>Valider</button>
+      <button 
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+      >Valider
+      </button>
     </form>
   </div>
 
-  <div>
-    <h2>Delete your compte :</h2>
-    <a href="{{ route('delete') }}">Delete</a>
+  <div class="mt-12">
+    <h2 class="text-2xl font-bold mb-3 mt-9">Delete your compte :</h2>
+    <a href="{{ route('delete') }}"
+    class="inline-block bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+      Delete
+    </a>
   </div>
 
 
