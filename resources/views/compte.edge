@@ -62,6 +62,25 @@
     @end
   </div>
 
+
+
+  <div>
+    <img class="h-32 w-32 rounded-full" src="{{ auth.user.avatarUrl }}" alt="">
+
+    <form action="" method="post" enctype="multipart/form-data">
+      <label for="avatar">Avatar :</label>
+      <input type="file" name="avatar" id="avatar">
+
+      <button type=""submit>Valider</button>
+    </form>
+  </div>
+
+  <div>
+    <h2>Delete your compte :</h2>
+    <a href="{{ route('delete') }}">Delete</a>
+  </div>
+
+
 </main>
 
 @end

@@ -30,4 +30,11 @@ export default class CompteController {
     response.redirect().back()
   }
 
+  async delete({ auth, response }: HttpContextContract) {
+    const user = auth.user
+    await user!.delete()
+    await auth.logout()
+    response.redirect().toRoute('home')
+  }
+
 }

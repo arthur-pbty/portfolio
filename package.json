@@ -64,6 +64,7 @@
     "youch-terminal": "^2.2.3"
   },
   "dependencies": {
+    "@adonisjs/attachment-lite": "^1.0.8",
     "@adonisjs/auth": "^8.2.3",
     "@adonisjs/core": "^5.9.0",
     "@adonisjs/lucid": "^18.4.2",
@@ -71,6 +72,7 @@
     "@adonisjs/session": "^6.4.0",
     "@adonisjs/shield": "^7.1.1",
     "@adonisjs/view": "^6.2.0",
+    "adonis-responsive-attachment": "^1.5.10",
     "alpinejs": "^3.13.3",
     "luxon": "^3.4.4",
     "phc-argon2": "^1.1.4",

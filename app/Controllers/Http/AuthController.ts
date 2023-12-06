@@ -27,10 +27,15 @@ export default class AuthController {
     return view.render('auth/signup')
   }
 
-  async doSignup({ request, response }: HttpContextContract) {
+  async doSignup({ request, response, auth }: HttpContextContract) {
     const playload = await request.validate(CreateUserValidator)
     await User.create(playload)
-    return response.redirect().toRoute('home')
+    try {
+      await auth.use('web').attempt(playload.email, playload.password)
+      response.redirect().toRoute('home')
+    } catch {
+      response.redirect().toRoute('login')
+    }
   }
 
 

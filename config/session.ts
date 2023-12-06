@@ -46,7 +46,7 @@ export default sessionConfig({
   | The name of the cookie that will hold the session id.
   |
   */
-  cookieName: 'adonis-session',
+  cookieName: 'session',
 
   /*
   |--------------------------------------------------------------------------
@@ -73,7 +73,7 @@ export default sessionConfig({
   | Example: `2 days`, `2.5 hrs`, `1y`, `5s` and so on.
   |
   */
-  age: '2h',
+  age: '1y',
 
   /*
   |--------------------------------------------------------------------------
