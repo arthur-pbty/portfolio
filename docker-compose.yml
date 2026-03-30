@@ -1,0 +1,17 @@
+services:
+  portfolio:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - "3012:3000"
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+    command: sh -c "npm install && npm run build && cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/static && node .next/standalone/server.js"
+    restart: unless-stopped
+
+volumes:
+  node_modules:
