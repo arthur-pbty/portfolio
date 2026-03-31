@@ -1,17 +1,12 @@
 services:
-  portfolio:
-    image: node:22-alpine
-    working_dir: /app
-    volumes:
-      - .:/app
-      - node_modules:/app/node_modules
+  web:
+    build:
+      context: .
     ports:
-      - "3012:3000"
+      - "3000:3000"
+    volumes:
+      - ./:/app        # monte ton code pour hot reload
+      - /app/node_modules # préserver les modules installés dans l'image
     environment:
-      - NODE_ENV=production
-      - HOSTNAME=0.0.0.0
-    command: sh -c "npm install && npm run build && cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/static && node .next/standalone/server.js"
-    restart: unless-stopped
-
-volumes:
-  node_modules:
+      - NODE_ENV=development
+    command: npm run dev
