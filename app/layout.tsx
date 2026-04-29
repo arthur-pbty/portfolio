@@ -108,7 +108,7 @@ const jsonLd = {
     "Auto-hébergement",
     "Infrastructure réseau",
   ],
-  sameAs: ["https://github.com"],
+  sameAs: ["https://github.com/arthur-pbty/portfolio"],
 };
 
 export default function RootLayout({

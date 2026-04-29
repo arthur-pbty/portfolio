@@ -1,12 +1,20 @@
 services:
-  web:
+  next-app:
     build:
       context: .
+      dockerfile: Dockerfile
+
+    container_name: portfolio-app
+
     ports:
-      - "3000:3000"
-    volumes:
-      - ./:/app        # monte ton code pour hot reload
-      - /app/node_modules # préserver les modules installés dans l'image
+      - "${WEB_PORT}:3000"
+
+    env_file:
+      - .env
+
+    restart: unless-stopped
+
     environment:
-      - NODE_ENV=development
-    command: npm run dev
+      - PORT=3000
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0

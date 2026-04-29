@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Galerie photo d'Arthur P. — moments de vie, voile et aventures.",
 };
 
-const photos = Array.from({ length: 68 }, (_, i) => {
+const photos = Array.from({ length: 33 }, (_, i) => {
   const num = String(i + 1).padStart(3, "0");
   return { src: `/pictures/photo_${num}.webp`, alt: `Photo ${i + 1}` };
 });

@@ -1,4 +1,4 @@
-import { ExternalLink, Timer, FileQuestion, Grid3X3, Video, QrCode, BookOpen, Link2, FileText, Bot, LinkIcon, Clock } from "lucide-react";
+import { ExternalLink, Timer, FileQuestion, Grid3X3, Video, QrCode, BookOpen, Link2, FileText, Bot, LinkIcon, Clock, Zap } from "lucide-react";
 
 const projects = [
   {
@@ -9,11 +9,67 @@ const projects = [
     tags: ["Site vitrine", "Hub"],
   },
   {
-    name: "pomodoro.arthurp.fr",
-    url: "https://pomodoro.arthurp.fr",
-    desc: "Application de gestion du temps basée sur la méthode Pomodoro.",
-    icon: <Timer size={20} className="text-red-400" />,
-    tags: ["Productivité", "Web App"],
+    name: "links.arthurp.fr",
+    url: "https://links.arthurp.fr",
+    desc: "Page de centralisation de liens.",
+    icon: <Link2 size={20} className="text-pink-400" />,
+    tags: ["Liens", "Hub"],
+  },
+  {
+    name: "lazybot.arthurp.fr",
+    url: "https://lazybot.arthurp.fr",
+    desc: "Bot Discord contrôlé via un dashboard web, développé et hébergé par moi.",
+    icon: <Bot size={20} className="text-indigo-400" />,
+    tags: ["Discord", "Bot", "Dashboard"],
+  },
+  {
+    name: "clock.arthurp.fr",
+    url: "https://clock.arthurp.fr",
+    desc: "Application d'affichage et de gestion du temps.",
+    icon: <Clock size={20} className="text-sky-400" />,
+    tags: ["Temps", "Utilitaire"],
+  },
+  {
+    name: "flint.arthurp.fr",
+    url: "https://flint.arthurp.fr",
+    desc: "Saas de gestion de bots Discord avec dashboard.",
+    icon: <Zap size={20} className="text-indigo-400" />,
+    tags: ["Discord", "Bot", "Dashboard"],
+  },
+  {
+    name: "learn.arthurp.fr",
+    url: "https://learn.arthurp.fr",
+    desc: "Plateforme d'apprentissage et de documentation personnelle.",
+    icon: <BookOpen size={20} className="text-orange-400" />,
+    tags: ["Apprentissage", "Documentation"],
+  },
+  {
+    name: "form.arthurp.fr",
+    url: "https://form.arthurp.fr",
+    desc: "Système de formulaires auto-hébergé.",
+    icon: <FileText size={20} className="text-teal-400" />,
+    tags: ["Formulaires", "Auto-hébergé"],
+  },
+  {
+    name: "reducelink.arthurp.fr",
+    url: "https://reducelink.arthurp.fr",
+    desc: "Service de réduction de liens.",
+    icon: <LinkIcon size={20} className="text-amber-400" />,
+    tags: ["Outil", "Raccourcisseur"],
+  },
+  {
+    name: "imprimersudoku.arthurp.fr",
+    url: "https://imprimersudoku.arthurp.fr",
+    desc: "Feuille de grilles de Sudoku imprimables.",
+    icon: <Grid3X3 size={20} className="text-teal-400" />,
+    tags: ["Jeu", "Imprimante"],
+  },
+  {
+    name: "qrcode.arthurp.fr",
+    url: "https://qrcode.arthurp.fr",
+    desc: "Générateur de QR codes personnalisés.",
+    icon: <QrCode size={20} className="text-cyan-400" />,
+    tags: ["Outil", "Utilitaire"],
   },
   {
     name: "qcu.arthurp.fr",
@@ -37,53 +93,11 @@ const projects = [
     tags: ["Communication", "Auto-hébergé"],
   },
   {
-    name: "qrcode.arthurp.fr",
-    url: "https://qrcode.arthurp.fr",
-    desc: "Générateur de QR codes personnalisés.",
-    icon: <QrCode size={20} className="text-cyan-400" />,
-    tags: ["Outil", "Utilitaire"],
-  },
-  {
-    name: "learn.arthurp.fr",
-    url: "https://learn.arthurp.fr",
-    desc: "Plateforme d'apprentissage et de documentation personnelle.",
-    icon: <BookOpen size={20} className="text-orange-400" />,
-    tags: ["Apprentissage", "Documentation"],
-  },
-  {
-    name: "links.arthurp.fr",
-    url: "https://links.arthurp.fr",
-    desc: "Page de centralisation de liens.",
-    icon: <Link2 size={20} className="text-pink-400" />,
-    tags: ["Liens", "Hub"],
-  },
-  {
-    name: "form.arthurp.fr",
-    url: "https://form.arthurp.fr",
-    desc: "Système de formulaires auto-hébergé.",
-    icon: <FileText size={20} className="text-teal-400" />,
-    tags: ["Formulaires", "Auto-hébergé"],
-  },
-  {
-    name: "lazybot.arthurp.fr",
-    url: "https://lazybot.arthurp.fr",
-    desc: "Bot Discord contrôlé via un dashboard web, développé et hébergé par moi.",
-    icon: <Bot size={20} className="text-indigo-400" />,
-    tags: ["Discord", "Bot", "Dashboard"],
-  },
-  {
-    name: "reducelink.arthurp.fr",
-    url: "https://reducelink.arthurp.fr",
-    desc: "Service de réduction de liens.",
-    icon: <LinkIcon size={20} className="text-amber-400" />,
-    tags: ["Outil", "Raccourcisseur"],
-  },
-  {
-    name: "clock.arthurp.fr",
-    url: "https://clock.arthurp.fr",
-    desc: "Application d'affichage et de gestion du temps.",
-    icon: <Clock size={20} className="text-sky-400" />,
-    tags: ["Temps", "Utilitaire"],
+    name: "pomodoro.arthurp.fr",
+    url: "https://pomodoro.arthurp.fr",
+    desc: "Application de gestion du temps basée sur la méthode Pomodoro.",
+    icon: <Timer size={20} className="text-red-400" />,
+    tags: ["Productivité", "Web App"],
   },
 ];
 

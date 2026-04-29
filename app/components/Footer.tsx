@@ -1,4 +1,4 @@
-import { Github, Mail, Globe, Heart } from "lucide-react";
+import { Github, Mail, Globe, Heart, Presentation } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -42,16 +42,16 @@ export default function Footer() {
             <h4 className="font-semibold text-sm mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href="https://arthurp.fr"
+                href="https://contact.arthurp.fr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted hover:text-emphasis transition-colors"
               >
                 <Globe size={16} />
-                arthurp.fr
+                contact.arthurp.fr
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/arthur-pbty/portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted hover:text-emphasis transition-colors"
@@ -60,11 +60,20 @@ export default function Footer() {
                 GitHub
               </a>
               <a
-                href="mailto:arthur.puechberty@outlook.com"
+                href="mailto:contact@arthurp.fr"
                 className="flex items-center gap-2 text-sm text-muted hover:text-emphasis transition-colors"
               >
                 <Mail size={16} />
-                arthur.puechberty@outlook.com
+                contact@arthurp.fr
+              </a>
+              <a
+                href="https://arthurp.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-muted hover:text-emphasis transition-colors"
+              >
+                <Presentation size={16} />
+                arthurp.fr
               </a>
             </div>
           </div>

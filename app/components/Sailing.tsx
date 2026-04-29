@@ -6,8 +6,8 @@ const palmares = [
     results: [
       { rank: "1er", event: "Spi Ouest France", boat: "Open 5.70" },
       { rank: "1er", event: "GPEN", boat: "Open 5.70" },
-      { rank: "3e", event: "18h d'Arcachon", boat: "Open 5.70" },
-      { rank: "2e", event: "Championnat de France Espoirs", boat: "" },
+      { rank: "3e", event: "18h d'Arcachon", boat: "5.90" },
+      { rank: "2e", event: "Championnat de France Espoirs", boat: "Open 5.70" },
     ],
   },
   {
@@ -41,9 +41,9 @@ const qualities = [
 ];
 
 function getRankColor(rank: string) {
-  if (rank.startsWith("1er")) return "text-yellow-400 bg-yellow-400/10 border-yellow-400/20";
-  if (rank.startsWith("2e")) return "text-gray-300 bg-gray-300/10 border-gray-300/20";
-  if (rank.startsWith("3e")) return "text-amber-600 bg-amber-600/10 border-amber-600/20";
+  if (rank.startsWith("1er")) {return "text-yellow-400 bg-yellow-400/10 border-yellow-400/20";}
+  if (rank.startsWith("2e")) {return "text-gray-300 bg-gray-300/10 border-gray-300/20";}
+  if (rank.startsWith("3e")) {return "text-amber-600 bg-amber-600/10 border-amber-600/20";}
   return "text-blue-400 bg-blue-400/10 border-blue-400/20";
 }
 
@@ -89,7 +89,8 @@ export default function Sailing() {
                     deux championnats du monde
                   </strong>{" "}
                   en Open Skiff et obtenu le statut de{" "}
-                  <strong className="text-emphasis">sportif de haut niveau</strong>.
+                  <strong className="text-emphasis">sportif de haut niveau</strong>{" "}
+                  en gagnant le titre de champion de France en Open 5.70.
                 </p>
               </div>
             </div>
@@ -115,15 +116,15 @@ export default function Sailing() {
             {/* Highlights */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
               <div className="p-3 sm:p-4 rounded-xl border border-border bg-card text-center">
-                <div className="text-2xl font-bold text-emphasis">2</div>
+                <div className="text-2xl font-bold text-emphasis">1</div>
                 <div className="text-[10px] text-muted mt-1">
-                  Championnats du monde
+                  Champion de France
                 </div>
               </div>
               <div className="p-3 sm:p-4 rounded-xl border border-border bg-card text-center">
                 <div className="text-2xl font-bold text-emphasis">9e</div>
                 <div className="text-[10px] text-muted mt-1">
-                  Mondial (×2)
+                  Championnat du monde (×2)
                 </div>
               </div>
               <div className="p-3 sm:p-4 rounded-xl border border-border bg-card text-center">

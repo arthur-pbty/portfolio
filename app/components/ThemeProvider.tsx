@@ -12,8 +12,15 @@ const ThemeContext = createContext<{
   toggleTheme: () => {},
 });
 
-export function useTheme() {
-  return useContext(ThemeContext);
+// safe getter (évite SSR crash)
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") {return "dark";}
+
+  return (
+    (localStorage.getItem("theme") as Theme) ||
+    (document.documentElement.getAttribute("data-theme") as Theme) ||
+    "dark"
+  );
 }
 
 export default function ThemeProvider({
@@ -21,21 +28,15 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<Theme>("dark");
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>(() => getInitialTheme());
 
   useEffect(() => {
-    const stored =
-      (document.documentElement.getAttribute("data-theme") as Theme) || "dark";
-    setTheme(stored);
-    setMounted(true);
-  }, []);
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    localStorage.setItem("theme", next);
-    document.documentElement.setAttribute("data-theme", next);
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
@@ -43,4 +44,8 @@ export default function ThemeProvider({
       {children}
     </ThemeContext.Provider>
   );
+}
+
+export function useTheme() {
+  return useContext(ThemeContext);
 }

@@ -7,6 +7,8 @@ import {
   Image,
   Tv,
   Monitor,
+  Music,
+  Search,
 } from "lucide-react";
 
 const infra = [
@@ -54,6 +56,18 @@ const personalServices = [
     name: "Jellyfin",
     url: "jellyfin.arthurp.fr",
     desc: "Serveur multimédia auto-hébergé — films, séries, musique.",
+  },
+  {
+    icon: <Music size={20} className="text-purple-400" />,
+    name: "Navidrome",
+    url: "navidrome.arthurp.fr",
+    desc: "Serveur de musique auto-hébergé — streaming de ma bibliothèque musicale.",
+  },
+  {
+    icon: <Search size={20} className="text-amber-400" />,
+    name: "SearXNG",
+    url: "searxng.arthurp.fr",
+    desc: "Moteur de recherche anonyme et décentralisé.",
   },
 ];
 
