@@ -116,7 +116,7 @@ export default function Sailing() {
             {/* Highlights */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
               <div className="p-3 sm:p-4 rounded-xl border border-border bg-card text-center">
-                <div className="text-2xl font-bold text-emphasis">1</div>
+                <div className="text-2xl font-bold text-emphasis">1er</div>
                 <div className="text-[10px] text-muted mt-1">
                   Champion de France
                 </div>

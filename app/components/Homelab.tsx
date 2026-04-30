@@ -9,6 +9,10 @@ import {
   Monitor,
   Music,
   Search,
+  Calendar,
+  EarthLock,
+  Router,
+  HousePlug,
 } from "lucide-react";
 
 const infra = [
@@ -48,26 +52,42 @@ const personalServices = [
   {
     icon: <Image size={20} className="text-pink-400" />,
     name: "Immich",
-    url: "immich.arthurp.fr",
     desc: "Gestionnaire de photos auto-hébergé — alternative à Google Photos.",
   },
   {
     icon: <Tv size={20} className="text-indigo-400" />,
     name: "Jellyfin",
-    url: "jellyfin.arthurp.fr",
     desc: "Serveur multimédia auto-hébergé — films, séries, musique.",
   },
   {
     icon: <Music size={20} className="text-purple-400" />,
     name: "Navidrome",
-    url: "navidrome.arthurp.fr",
     desc: "Serveur de musique auto-hébergé — streaming de ma bibliothèque musicale.",
   },
   {
     icon: <Search size={20} className="text-amber-400" />,
     name: "SearXNG",
-    url: "searxng.arthurp.fr",
     desc: "Moteur de recherche anonyme et décentralisé.",
+  },
+  {
+    icon: <HousePlug size={20} className="text-blue-400" />,
+    name: "Home Assistant",
+    desc: "Automatisation de la maison pour contrôler mes appareils connectés et créer des scénarios intelligents.",
+  },
+  {
+    icon: <Router size={20} className="text-red-400" />,
+    name: "OPNsense",
+    desc: "Firewall et routeur pour la sécurité de mon réseau domestique.",
+  },
+  {
+    icon: <EarthLock size={20} className="text-red-400" />,
+    name: "WireGuard VPN",
+    desc: "Accès sécurisé à mon réseau domestique depuis l'extérieur, même en déplacement.",
+  },
+  {
+    icon: <Calendar size={20} className="text-green-400" />,
+    name: "Radicale",
+    desc: "Serveur de calendrier et de contact pour la synchronisation des données.",
   },
 ];
 
@@ -127,9 +147,6 @@ export default function Homelab() {
                   {svc.icon}
                   <div>
                     <h4 className="font-semibold text-sm">{svc.name}</h4>
-                    <span className="text-[10px] text-dim font-mono">
-                      {svc.url}
-                    </span>
                   </div>
                 </div>
                 <p className="text-xs text-muted leading-relaxed">

@@ -42,7 +42,7 @@ export default function Footer() {
             <h4 className="font-semibold text-sm mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href="https://contact.arthurp.fr"
+                href="https://contact.arthurp.fr/?project=portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted hover:text-emphasis transition-colors"
