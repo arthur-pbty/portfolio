@@ -71,7 +71,7 @@ export default function Sailing() {
               </h3>
               <div className="space-y-4 text-sm text-secondary leading-relaxed">
                 <p>
-                  J&apos;ai commencé la voile à <strong className="text-emphasis">7 ans</strong> pendant
+                  J&apos;ai commencé la voile à <strong className="text-emphasis">7 ans </strong>pendant
                   des stages d&apos;été, influencé par ma mère qui pratiquait
                   déjà ce sport.
                 </p>

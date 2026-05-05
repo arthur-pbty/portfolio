@@ -13,6 +13,7 @@ import {
   EarthLock,
   Router,
   HousePlug,
+  Notebook,
 } from "lucide-react";
 
 const infra = [
@@ -88,6 +89,11 @@ const personalServices = [
     icon: <Calendar size={20} className="text-green-400" />,
     name: "Radicale",
     desc: "Serveur de calendrier et de contact pour la synchronisation des données.",
+  },
+  {
+    icon: <Notebook size={20} className="text-blue-400" />,
+    name: "Jolpin",
+    desc: "Gestionnaire de notes auto-hébergé.",
   },
 ];
 
