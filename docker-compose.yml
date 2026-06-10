@@ -1,20 +1,22 @@
 services:
-  next-app:
+  visio:
     build:
       context: .
       dockerfile: Dockerfile
 
-    container_name: portfolio-app
+    container_name: portfolio
 
     ports:
-      - "${WEB_PORT}:3000"
+      - "${APP_PORT}:3000"
 
     env_file:
       - .env
 
     restart: unless-stopped
 
-    environment:
-      - PORT=3000
-      - NODE_ENV=production
-      - HOSTNAME=0.0.0.0
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
