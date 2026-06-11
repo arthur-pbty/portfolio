@@ -44,8 +44,8 @@ const projects = [
     tags: ["Apprentissage", "Documentation"],
   },
   {
-    name: "form.arthurp.fr",
-    url: "https://form.arthurp.fr",
+    name: "formcraft.arthurp.fr",
+    url: "https://formcraft.arthurp.fr",
     desc: "Système de formulaires auto-hébergé.",
     icon: <FileText size={20} className="text-teal-400" />,
     tags: ["Formulaires", "Auto-hébergé"],
@@ -70,13 +70,6 @@ const projects = [
     desc: "Générateur de QR codes personnalisés.",
     icon: <QrCode size={20} className="text-cyan-400" />,
     tags: ["Outil", "Utilitaire"],
-  },
-  {
-    name: "qcu.arthurp.fr",
-    url: "https://qcu.arthurp.fr",
-    desc: "Site de QCU pour réviser la physique.",
-    icon: <FileQuestion size={20} className="text-yellow-400" />,
-    tags: ["Éducation", "Physique"],
   },
   {
     name: "sudoku.arthurp.fr",
